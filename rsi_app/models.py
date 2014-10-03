@@ -6,4 +6,4 @@ class Founders(models.Model):
     death_year = models.PositiveIntegerField(default=1700)
     position = models.CharField(max_length=256)
     slug = models.SlugField(max_length=256)
-
+    bio = models.TextField(max_length=10000)

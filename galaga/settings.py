@@ -20,7 +20,7 @@ STATIC_PATH = os.path.join(PROJECT_PATH, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
-
+SITE_ID = 1
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -48,13 +48,16 @@ STATIC_DIRS = (
 
 DEFAULT_APPS = [
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'galaga',
-    'south'
+    'south',
+    'photologue',
+    'sortedm2m',
 ]
 
 THIRD_PARTY_APPS = [
