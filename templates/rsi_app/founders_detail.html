@@ -5,10 +5,14 @@
 <div>
     <h2>{{ founder.name }}</h2>
     <div>
-        Birth Year: {{ founder.birth_year }}
-        Death Year: {{ founder.death_year }}
-        Position: {{ founder.position }}
-
+        <span>Birth Year: {{ founder.birth_year }}</span>
+        <span>Death Year: {{ founder.death_year }}</span>
+        <span>Position: {{ founder.position }}</span>
     </div>
+    <h3>Biography</h3>
+    <div>
+        {{ founder.bio }}
+    </div>
+
 </div>
 {% endblock %}

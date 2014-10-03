@@ -4,8 +4,12 @@ from django.views.generic import View
 
 # Create your views here.
 def index(request):
-    return render(request, 'rsi_app/index.html')
+    return render(request, 'rsi_app/index.html')\
 
+class FounderList(View):
+    def get(self, request):
+        founders = Founders.objects.all()
+        return render(request, 'rsi_app/founders_list.html', {'founders': founders})
 class FoundersList(View):
 
     def get(self, request):
@@ -18,7 +22,7 @@ class FoundersList(View):
 class FounderDetail(View):
     def get(self, request, slug):
         founder = get_object_or_404(Founders, slug=slug)
-        return render(request, 'rsi_app/founder_detail.html', {'founder': founder})
+        return render(request, 'rsi_app/founders_detail.html', {'founder': founder})
 
 def ghost_stories(request):
     return render(request, 'rsi_app/ghost_stories.html')
