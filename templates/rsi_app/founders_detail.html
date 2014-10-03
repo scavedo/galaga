@@ -12,7 +12,8 @@
                 <ol class="breadcrumb">
                     <li><a href="/">Home</a>
                     </li>
-                    <li class="active">Ghost Stories</li>
+                    <li><a href="/founders">Our Founding Members</a></li>
+                    <li class="active">{{ founder.name }}</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +25,6 @@
         <span style="font-size: 18px;">Birth Year: <b>{{ founder.birth_year }}</b></span><br />
         <span style="font-size: 18px;">Death Year: <b>{{ founder.death_year }}</b></span><br />
         <span style="font-size: 18px;">Position: <b>{{ founder.position }}</b></span>
-
     </div>
     <hr width="80%" />
     <h3 style="text-transform: uppercase;">Biography</h3>

@@ -16,3 +16,6 @@ class Founders(models.Model):
 
     def get_absolute_url(self):
         return reverse('practice_app.views.post', args=[self.slug])
+
+    class Meta:
+        verbose_name_plural = "Founders"
