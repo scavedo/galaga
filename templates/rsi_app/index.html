@@ -2,8 +2,7 @@
 
 {% block title %} TEST TITLE {% endblock %}
 
-{% block content %}
-    <!-- Navigation -->
+{% block carousel %}
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -43,6 +42,9 @@
             <span class="icon-next"></span>
         </a>
     </header>
+{% endblock %}
+
+{% block content %}
 
     <!-- Page Content -->
     <div class="container">
@@ -90,13 +92,10 @@
         </div>
         <!-- /.row -->
 
+
     </div>
     <!-- /.container -->
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+
+
 
 {% endblock %}

@@ -17,7 +17,14 @@
         <link href="{% static 'css/galaga.css' %}" rel="stylesheet">
 
         <!-- Custom Fonts -->
-{#        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">#}
+       <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     </head>
     <body>
         <!-- Navigation -->
@@ -40,7 +47,7 @@
                             <a href="/founders">Founders</a>
                         </li>
                         <li>
-                            <a href="/events.html">Events</a>
+                            <a href="/events">Events</a>
                         </li>
                         <li>
                             <a href="/ghost-stories">Ghost Stories</a>
@@ -54,9 +61,18 @@
             </div>
             <!-- /.container -->
         </nav>
+        {% block carousel %}
+        {% endblock %}
         <div class="content">
             {% block content %}
             {% endblock %}
         </div>
+
+            <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
     </body>
 </html>
