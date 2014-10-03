@@ -12,5 +12,7 @@ urlpatterns = patterns('',
 
     #our urls
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
-    url(r'^founders', FoundersList.as_view())
+    url(r'^founders', FoundersList.as_view()),
+    url(r'^ghost_stories/', 'rsi_app.views.ghost_stories'),
+
 )
