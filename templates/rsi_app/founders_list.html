@@ -20,9 +20,12 @@
            <div class="panel-body">{{ error }}</div>
         {% else %}
             {% for founder in founders %}
-                <div class="panel-body"><a href = "/{{ founder.slug }}">{{ founder.name }}</a>
-                    <small>{{ founder.birth_year }}</small>
+                <div class="panel-body"><h4><a href = "/{{ founder.slug }}">{{ founder.name }}</a>
+                    <div style="clear:both;"><small>Lived from {{ founder.birth_year }} - {{ founder.death_year }}</small></div>
+                    <div style="clear:both;"><small>Position: {{ founder.position }}</small></div>
+                    </h4>
                 </div>
+
             {% endfor %}
         {% endif %}
         </div>
