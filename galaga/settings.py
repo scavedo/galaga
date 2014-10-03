@@ -54,7 +54,9 @@ DEFAULT_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'galaga',
-    'south'
+    'south',
+    'photologue',
+    'sortedm2m',
 ]
 
 THIRD_PARTY_APPS = [
