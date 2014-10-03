@@ -35,8 +35,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+from photologue import PHOTOLOGUE_APP_DIR
 TEMPLATE_DIRS = (
    BASE_DIR + '/templates/',
+   PHOTOLOGUE_APP_DIR
 )
 
 STATIC_DIRS = (
@@ -123,7 +125,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
                STATIC_PATH,
