@@ -33,3 +33,6 @@ class Event(View):
 
 def history(request):
     return render(request, 'rsi_app/history.html')
+
+def grandison(request):
+    return render(request, 'rsi_app/grandison.html')
