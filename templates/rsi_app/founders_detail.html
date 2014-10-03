@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
 <div>
     <h2>{{ founder.name }}</h2>
     <div>
         Birth Year: {{ founder.birth_year }}
         Death Year: {{ founder.death_year }}
         Position: {{ founder.position }}
+
     </div>
 </div>
+{% endblock %}
