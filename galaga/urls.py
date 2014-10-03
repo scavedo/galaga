@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','rsi_app.views.index'),
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
-    url(r'^founders', founders_list)
+    url(r'^founders', FoundersList.as_view())
 )
