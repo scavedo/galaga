@@ -9,7 +9,7 @@ def founders_list(request):
     founders = Founders.objects.all()
     return render(request, 'rsi_app/founders_list.html', {'founders': founders})
 
-def founder_detail(request, slug):
+def founders_detail(request, slug):
     founder = get_object_or_404(Founders, slug=slug)
     return render(request, 'rsi_app/founder_detail.html', {'founder': founder})
 
