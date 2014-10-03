@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^history/', 'rsi_app.views.history'),
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
     url(r'^founders', FoundersList.as_view()),
+    url(r'^events', Event.as_view()),
 
 
 )

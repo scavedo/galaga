@@ -27,5 +27,9 @@ class FounderDetail(View):
 def ghost_stories(request):
     return render(request, 'rsi_app/ghost_stories.html')
 
+class Event(View):
+    def get(self, request):
+        return render(request, 'rsi_app/event.html')
+
 def history(request):
     return render(request, 'rsi_app/history.html')
