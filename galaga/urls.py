@@ -8,6 +8,9 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','rsi_app.views.index'),
+    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
+
+    #our urls
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
     url(r'^founders', FoundersList.as_view())
 )

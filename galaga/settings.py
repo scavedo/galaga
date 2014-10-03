@@ -55,7 +55,6 @@ DEFAULT_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'galaga',
-    'south',
     'photologue',
     'sortedm2m',
 ]
@@ -74,6 +73,10 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+SOUTH_MIGRATION_MODULES = {
+    'photologue': 'photologue.south_migrations',
+}
 
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
