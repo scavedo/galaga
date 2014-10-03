@@ -36,3 +36,6 @@ def history(request):
 
 def grandison(request):
     return render(request, 'rsi_app/grandison.html')
+
+def bones(request):
+    return render(request, 'rsi_app/bones.html')
