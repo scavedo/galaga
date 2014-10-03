@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^$','rsi_app.views.index'),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
     url(r'^grandison', 'rsi_app.views.grandison'),
+    url(r'^bones', 'rsi_app.views.bones'),
     #our urls
     url(r'^ghost-stories/', 'rsi_app.views.ghost_stories'),
     url(r'^history/', 'rsi_app.views.history'),
@@ -18,3 +19,4 @@ urlpatterns = patterns('',
     url(r'^events', Event.as_view()),
 
 )
+
