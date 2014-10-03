@@ -11,8 +11,9 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 
     #our urls
+    url(r'^ghost-stories/', 'rsi_app.views.ghost_stories'),
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
     url(r'^founders', FoundersList.as_view()),
-    url(r'^ghost_stories/', 'rsi_app.views.ghost_stories'),
+
 
 )
