@@ -11,12 +11,13 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
     url(r'^grandison', 'rsi_app.views.grandison'),
     url(r'^bones', 'rsi_app.views.bones'),
+    url(r'^events', Event.as_view()),
     #our urls
     url(r'^ghost-stories/', 'rsi_app.views.ghost_stories'),
     url(r'^history/', 'rsi_app.views.history'),
     url(r'^(?P<slug>[\w\-]+)/$', FounderDetail.as_view()),
     url(r'^founders', FoundersList.as_view()),
-    url(r'^events', Event.as_view()),
+
 
 )
 
