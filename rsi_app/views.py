@@ -12,3 +12,4 @@ def founders_list(request):
 def founder_detail(request, slug):
     founder = get_object_or_404(Founders, slug=slug)
     return render(request, 'rsi_app/founder_detail.html', {'founder': founder})
+
